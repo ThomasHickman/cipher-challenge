@@ -1,0 +1,136 @@
+﻿
+<div style="text-align: center; padding-top: 20px">
+    <div id="codetoandfrom">
+        <span class="tofromblock">
+            <div class="title">Code</div>
+            <div id="nospacedcode" contenteditable class="inputbox"></div>
+        </span>
+        <span class="separation">&nbsp</span>
+        <span class="tofromblock">
+            <div class="title">Action</div>
+            <br />
+            <br />
+            <br />
+            <div id="transholder">
+                <div id="trans1" class="translationtype">
+                    Move Letter
+                    <input type="text" />
+                    to
+                    <input type="text" />
+                    <img onclick="DelTrans(1)" class="crossimg" src="cross-24-20.png" />
+                </div>
+            </div>
+            <div id="newcont" class="NewPoint">
+                <span onclick="NewTrans()" style="width: 70%">New</span>
+                <div onclick="newarrowclick()" style="float: right; height: 100%">
+                    <img src="Arrowdown.png" style="width: 10px" />
+                </div>
+            </div>
+            <div style="display: none" id="Suggestions"></div>
+            <br />
+            <!--
+            <div>
+                Square:
+                <table contenteditable="true" id="keysquare" onclick="squareclick()" align="center" class="keysquare">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>-->
+        </span>
+        <span class="separation">&nbsp</span>
+        <span class="tofromblock">
+            <div class="title">Translation</div>
+            <div id="output" onmouseup="selectupdate()" class="outputbox"></div>
+        </span>
+        <span class="separation">&nbsp</span>
+        <span class="separation">&nbsp</span>
+    </div>
+    <div id="output" style="font-family: monospace; font-size: 20px"></div>
+    <br style="width: 1000px" />
+</div>
+<div style="width: 60%; float: left" id="displaypanal">
+    <div id="SubsMapping">KeySquare:</div>
+    <div id="FreqChart" class="BarChart DisChart"></div>
+</div>
+<div class="buttonspanal">
+    <div>
+        <div class="title">Word Look Up</div>
+        <br />
+        <div>
+            Word:
+            <input style="width: 80px" type="text" id="textsearch" />
+            Original:
+            <input style="width: 80px" id="origsearch" type="text" />
+            Type:
+            <select id="searchtype">
+                <option>All</option>
+                <option>Nown</option>
+                <option>Verb</option>
+                <option>Adjective</option>
+                <option>Adverb</option>
+            </select>
+        </div>
+        <input type="button" value="Search" onclick="updatesearch()" />
+        <br />
+        Values:
+        <div class="outputbox" style="height: 40px; width: 98%; margin-top: 20px" id="searchoutput"></div>
+        <div />
+        <br />
+        <div>
+            <div class="title">Test Probibilities</div>
+            <br />
+            Probibility of
+            <input id="ProbTestInput" type="text" style="width: 20px">
+            <input type="button" value="Test" onclick="ProbTest()">
+            <div />
+            <br />
+            <div>
+                <div class="title">Vigenère Translation:</div>
+                <br />
+                Key:
+                <input id="ProbTestKey" type="text" style="width: 20px">
+                Cipher:
+                <input id="ProbTestCipher" type="text" style="width: 20px">
+                Plain:
+                <input id="ProbTestPlain" type="text" style="width: 20px">
+                <br />
+                <input type="button" value="Test" onclick="VTransUpdate()">
+                <div />
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
